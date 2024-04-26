@@ -1,35 +1,39 @@
 #include <stdio.h>
 
-int main(argc, argv[])
+void print (int (*shape)[2][11])
 {
-int circle[2][11] = 
-{
-(5, 7, 9, 11, 11, 11, 11, 11, 9, 7, 5),
-(3, 2, 1, 0, 0, 0, 0, 0, 1, 2, 3)
-};	for (a = 0; a < 1; a++)
+
+	for (int i = 0; i < 11; i++)
 	{
-		for (i = 0; i < 1; i++)
-		{
-		//argv is circle, need to translate argv to the 2d array, so we can choose
-			for (j = 0; j < argv[i][j]; j++)
+			for (int j = 0; j < (*shape)[i][j]; j++)
 			{
 			printf(" ");
 			}
-		}
-		for (k = 1; k < 1; k++)
-		{
-			for (l = 0; l < argv[k][l]; l++)
+			for (int l = 0; l < (*shape)[i][l]; l++)
 			{
 			printf("#");
 			}
-		}
-		for (m = 0; m < 1; m++)
-		{
-			for (n = 0; n < argv[m][n]; n++)
+			for (int n = 0; n < (*shape)[i][n]; n++)
 			{
-			printf(" ")
+			printf(" ");
 			}
-		}
-	printf("/n")
+	printf("\n");
 	}
+}
+int main(int argc, char *argv[])
+{
+int circle[2][11] = 
+{
+{5, 7, 9, 11, 11, 11, 11, 11, 9, 7, 5},
+{3, 2, 1, 0, 0, 0, 0, 0, 1, 2, 3}
+};
+
+if (strcmp(argv[1], "circle") == 0)
+{
+print(&circle);
+}
+else
+{
+printf("invalid shape \n");
+}
 }
