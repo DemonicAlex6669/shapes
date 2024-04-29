@@ -5,27 +5,30 @@ void print (int (*shape)[2][11])
 
 	for (int i = 0; i < 11; i++)
 	{
-			for (int j = 0; j < (*shape)[i][j]; j++)
+		for (int k = 0; k < 2; k++)
+		{
+			for (int a = 0; a < (*shape)[i][k]; a++)
 			{
 			printf(" ");
 			}
-			for (int l = 0; l < (*shape)[i][l]; l++)
+			for (int b = 0; b < (*shape)[i][k]; b++)
 			{
 			printf("#");
 			}
-			for (int n = 0; n < (*shape)[i][n]; n++)
+			for (int c = 0; c < (*shape)[i][k]; c++)
 			{
 			printf(" ");
 			}
 	printf("\n");
+	        }
 	}
 }
 int main(int argc, char *argv[])
 {
 int circle[2][11] = 
 {
-{5, 7, 9, 11, 11, 11, 11, 11, 9, 7, 5},
-{3, 2, 1, 0, 0, 0, 0, 0, 1, 2, 3}
+{3, 2, 1, 0, 0, 0, 0, 0, 1, 2, 3},
+{5, 7, 9, 11, 11, 11, 11, 11, 9, 7, 5}
 };
 
 if (strcmp(argv[1], "circle") == 0)
