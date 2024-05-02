@@ -7,15 +7,15 @@ void print (int (*shape)[2][11])
 	{
 		for (int k = 0; k < 2; k++)
 		{
-			for (int a = 0; a < (*shape)[i][k]; a++)
+			for (int a = 0; a < (*shape)[k][i]; a++)
 			{
 			printf(" ");
 			}
-			for (int b = 0; b < (*shape)[i][k]; b++)
+			for (int b = 0; b < (*shape)[k][i]; b++)
 			{
 			printf("#");
 			}
-			for (int c = 0; c < (*shape)[i][k]; c++)
+			for (int c = 0; c < (*shape)[k][i]; c++)
 			{
 			printf(" ");
 			}
@@ -31,12 +31,12 @@ int circle[2][11] =
 {5, 7, 9, 11, 11, 11, 11, 11, 9, 7, 5}
 };
 
-if (strcmp(argv[1], "circle") == 0)
-{
-print(&circle);
-}
-else
-{
-printf("invalid shape \n");
-}
+	if (strcmp(argv[1], "circle") == 0)
+	{
+	print(&circle);
+	}
+	else
+	{
+	printf("invalid shape \n");
+	}
 }
