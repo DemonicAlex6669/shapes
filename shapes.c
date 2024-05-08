@@ -2,25 +2,28 @@
 
 void print (int (*shape)[2][11])
 {
-
-	for (int i = 0; i < 11; i++)
+	//need to nest 6,27 into one loop
+	for (int i = 0; i < 1; i++)
 	{
-		for (int k = 0; k < 2; k++)
+		for (int j = 0; j < 11; j++)
 		{
-			for (int a = 0; a < (*shape)[k][i]; a++)
-			{
-			printf(" ");
-			}
-			for (int b = 0; b < (*shape)[k][i]; b++)
-			{
-			printf("#");
-			}
-			for (int c = 0; c < (*shape)[k][i]; c++)
-			{
-			printf(" ");
-			}
-	printf("\n");
-	        }
+		printf(" ");
+		}
+	}
+	for (int k = 1; k < 2; k++)
+	{
+		for (int l = 0; l < 11; l++)
+		{
+		printf("#");
+		}
+	}
+
+	for (int m = 0; m < 1; m++)
+	{
+		for (int n = 0; n < 11; n++)
+		{
+		printf(" ");
+		}
 	}
 }
 int main(int argc, char *argv[])
